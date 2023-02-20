@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
 
 const App = () => {
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
       <SafeAreaView style={styles.container}>
-        <AddTodo />
-        <TodoList />
+        {/* <AddTodo />
+        <TodoList /> */}
       </SafeAreaView>
-    </Provider>
+    // </Provider>
   );
 };
 
