@@ -16,6 +16,9 @@ const todosSlice = createSlice({
     addTodo: (state, action: PayloadAction<Todo>) => {
       state.items.push(action.payload);
     },
+    fetchTodos: (state) => {
+        state.items = state.items.slice(0, 1);
+      },
     toggleTodo: (state, action: PayloadAction<number>) => {
       const todo = state.items.find(item => item.id === action.payload);
       if (todo) {
@@ -28,5 +31,5 @@ const todosSlice = createSlice({
   }
 });
 
-export const { addTodo, toggleTodo, deleteTodo } = todosSlice.actions;
+export const { addTodo,fetchTodos, toggleTodo, deleteTodo } = todosSlice.actions;
 export default todosSlice.reducer;
