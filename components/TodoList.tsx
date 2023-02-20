@@ -5,29 +5,7 @@ import { RootState } from '../store';
 import { Todo } from '../types';
 import { fetchTodos, toggleTodo, deleteTodo } from '../todosSlice';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16
-  },
-  todoItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 8
-  },
-  todoText: {
-    flex: 1,
-    marginLeft: 8
-  },
-  completed: {
-    textDecorationLine: 'line-through'
-  }
-});
+
 
 const TodoList = () => {
   const dispatch = useDispatch();
@@ -72,3 +50,28 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      padding: 16
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 16
+    },
+    todoItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 8
+    },
+    todoText: {
+      flex: 1,
+      marginLeft: 8
+    },
+    completed: {
+      textDecorationLine: 'line-through'
+    }
+  });
