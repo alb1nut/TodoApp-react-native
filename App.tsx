@@ -1,25 +1,12 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
-// import store from './store';
-// import AddTodo from './components/AddTodo';
-// import TodoList from './components/TodoList';
+import store from './src/redux/store';
+import TodoList from './src/components/TodoList';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
-
-const App = () => {
+export default function App() {
   return (
-    // <Provider store={store}>
-      <SafeAreaView style={styles.container}>
-        {/* <AddTodo />
-        <TodoList /> */}
-      </SafeAreaView>
-    // </Provider>
+    <Provider store={store}>
+      <TodoList  />
+    </Provider>
   );
-};
-
-export default App;
+}
